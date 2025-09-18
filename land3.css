@@ -1,0 +1,235 @@
+
+body {
+    margin: 0;
+    background: #ececec;
+}
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.center-logo {
+    max-width: 400px; /* adjust as needed */
+    width: 90%;
+    height: auto;
+    display: block;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #262626;
+    color: #fff;
+    height: 90px;
+    padding: 0 32px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    margin-right: 40px;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 36px;
+}
+
+.nav-links a {
+    font-size: 1.08em;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #67ab79;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font-size: 1.2em;
+}
+
+.icons .icon-text {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .logo-img {
+        height: 56px;
+        margin-right: 18px;
+    }
+    .nav-links {
+        gap: 18px;
+    }
+    .top-bar {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        gap: 12px;
+    }
+    .logo-img {
+        height: 36px;
+        margin: 0;
+    }
+}
+.scroll-container {
+    width: 840px; /* 4 images @ 200px + margins */
+    overflow: hidden;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    background: white;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.scroll-content {
+    display: flex;
+    width: 1680px; /* twice of container */
+    animation: scrollLeftToRight 10s linear infinite;
+}
+.scroll-content img {
+    width: 200px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+@keyframes scrollLeftToRight {
+    0% {transform: translateX(-840px);}
+    100% {transform: translateX(0);}
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: flex-start; /* Aligns children to the left */
+  gap: 10px; /* Optional: space between images */
+  padding: 0;
+  margin: 0;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%; /* Ensures image sizes adjust */
+  height: auto;
+  margin-left: 0; /* Ensures no left margin */
+}
+.sticky-image {
+  position: sticky;
+  top: 0; /* it will stick to the top of the viewport */
+  z-index: 10; /* ensures it stays above other content */
+  width: 100%; /* or any size you prefer */
+  height: auto;
+}
+
+    .nav-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      font-size: 12px;
+    }
+    .nav-column {
+      min-width: 150px;
+      margin: 10px;
+    }
+    .nav-column a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      margin: 4px 0;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+    .nav-column a:hover {
+      text-decoration: underline;
+    }
+    .signup {
+      max-width: 200px;
+      font-size: 11px;
+    }
+    .signup input[type="email"] {
+      border: none;
+      border-bottom: 1px solid #000;
+      width: 100%;
+      padding: 4px 2px;
+      font-size: 11px;
+    }
+    .signup button {
+      background: none;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 5px;
+      font-size: 12px;
+    }
+    .signup p {
+      font-size: 9px;
+      color: #888;
+      margin-top: 2px;
+    }
+    select {
+      margin: 10px 0 40px 0;
+      font-size: 12px;
+      padding: 4px;
+    }
+    .footer-links {
+      font-size: 11px;
+      color: #bdbdbd;
+      letter-spacing: 0.06em;
+      margin-bottom: 50px;
+    }
+    .footer-links a {
+      color: #bdbdbd;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .big-logo {
+      font-weight: 900;
+      font-size: 200px;
+      letter-spacing: -20px;
+      line-height: 1;
+      font-family: Arial Black, Arial, sans-serif;
+      margin-bottom: 80px;
+      position: relative;
+    }
+    .big-logo .accessibility-icon {
+      position: absolute;
+      left: -15px;
+      top: 120px;
+      font-size: 24px;
+      background: black;
+      color: white;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      line-height: 36px;
+      cursor: pointer;
+    }
+    .copyright {
+      font-size: 10px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 60px;
+    }
